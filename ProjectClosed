@@ -1,0 +1,4 @@
+This 2to1mux project is closed
+
+* don't name the module starting with a number
+* the final code contains implementing a 2to1mux completely with the reg bus method
