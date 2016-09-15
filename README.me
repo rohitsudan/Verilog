@@ -40,6 +40,29 @@ endmodule
 -> input to the testbench should be type reg   //reg a,b,s;
 -> output to the testbench should be type wire //wire out;
 
+//////////////////////////////////////////
+the next way of description of code would be the Dataflow or called as contionus assignment
+this is one step higher level of description of hardware
+
+-> //assign statements are used
+-> // using a assing statement u can assign only once and u cannot do it again
+
+-> you cannot have any expression and assign it to a variable
+-> assign out = sel ? a:b
+-> assingn can be used only in dataflow
+
+/////////////////////////////////////////
+
+the next part would be the Behavioural level - like the next higherh level
+this is like programming in c
+-> whenever u see u reg or always block u realize that u r in behavioural mode
+-> always @ (a or b or c ) //whenver a,b,c anyone of these changes the code inside is executed
+-> there should be a begin and end for the always block
+-> inside always block the values that u assign should be reg (reg out) ///take a look
+
+// there are strict ways to code in verilog and lot to remember with the syntax
+// so try mostly to adopt the syntax and not comlpicate stuff as u might end up with a lot of errors
+
 
 
    

@@ -1,0 +1,8 @@
+The software that is used here is ICARIUS verilog
+
+$ iverilog testbench_simple.v simple.v -o simout // this takes code from the simulator and complies it
+$ vvp simout  //this takes the code and generates the .vcd file for execution
+$ gtkwave &
+
+these three commands will load the required stuff onto the site for graphical view
+
