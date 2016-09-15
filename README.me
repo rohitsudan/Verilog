@@ -1,0 +1,47 @@
+This documentation contains the docu for the various aspects of the changes made in the file of README.me for the 2to1mux
+
+it also contains the verilog documentation for th code
+
+Verilog documentation--
+
+-> starts with the key word module and endmodule
+-> module should have a name and should end with a semicolon
+-> the semi colon can be ignored except for a certain instances
+-> inputs and outputs are specified in the brackets - in0,in1,s,out
+-> so make sure verilog knows which is the input and which is the output
+-> input in0,in1,s;
+   output out;
+   these 2 lines does that
+-> GATE level - structuaral level
+-> follow the below steps to make the gate code for the MUX
+-> never forget to name your gate
+-> they say it's like doing spice NETLIST - after reading digital read and know more about it
+-> so here is the full code for the follow up (structural or behavioural level code)
+// GATE LEVEL DESCRIPTION ///
+module 2to1mux(in0,in1,s,out);
+
+input in0,in1,s;
+output out;
+
+not inv1(s_bar,s);
+and and1(a1,s_bar,in0);
+and and2(a2,s,in1);
+or or1(out,a1,a2);
+
+/////////////////////////////////////
+
+endmodule
+
+-> the next step would be to write the testbench for this code 
+-> first specify the timescale // `timescale 1ns/10ps //
+-> no input output required for module in testbench
+-> module testbench_simple(); //try naming your module wit the file name
+-> comments are given in double back slashes
+-> input to the testbench should be type reg   //reg a,b,s;
+-> output to the testbench should be type wire //wire out;
+
+
+
+   
+
+
